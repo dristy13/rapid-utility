@@ -1,0 +1,107 @@
+.ru-about {
+  background: var(--ru-bg);
+}
+
+.ru-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 57px;
+  align-items: center;
+}
+
+.ru-about-visual {
+  position: relative;
+}
+
+.ru-about-image {
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--ru-line);
+  box-shadow: 0 24px 50px rgba(20, 28, 30, 0.18);
+}
+
+.ru-about-image img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.ru-about-card {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  background: var(--ru-surface-strong);
+  border: 1px solid var(--ru-line);
+  border-radius: 18px;
+  padding: 16px 18px;
+  max-width: 240px;
+  box-shadow: 0 16px 30px rgba(20, 28, 30, 0.12);
+}
+
+.ru-about-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.ru-about-card p {
+  font-size: 13px;
+  color: var(--ru-muted);
+}
+
+.ru-about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ru-about-copy h2 {
+  font-size: 38px;
+  line-height: 1.1;
+}
+
+.ru-about-copy p {
+  color: var(--ru-muted);
+  font-size: 17px;
+}
+
+.ru-about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.ru-about-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+}
+
+.ru-about-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ru-accent);
+}
+
+@media (max-width: 900px) {
+  .ru-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ru-about-card {
+    right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ru-about-copy h2 {
+    font-size: 30px;
+  }
+}

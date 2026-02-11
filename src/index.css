@@ -1,0 +1,124 @@
+:root {
+  --ru-bg: #f4efe7;
+  --ru-surface: #fff9f1;
+  --ru-surface-strong: #ffffff;
+  --ru-ink: #1c2424;
+  --ru-muted: #5d6b6a;
+  --ru-accent: #c97b3c;
+  --ru-accent-2: #1f6f68;
+  --ru-line: #e5d6c5;
+  --ru-shadow: rgba(20, 28, 30, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  background: var(--ru-bg);
+  color: var(--ru-ink);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "DM Serif Display", "Times New Roman", serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.ru-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.ru-section {
+  padding: 96px 0;
+  position: relative;
+}
+
+.ru-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(31, 111, 104, 0.12);
+  color: var(--ru-accent-2);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.ru-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.ru-btn-primary {
+  background: var(--ru-accent-2);
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(31, 111, 104, 0.25);
+}
+
+.ru-btn-primary:hover {
+  background: #165c56;
+  transform: translateY(-2px);
+}
+
+.ru-btn-ghost {
+  background: transparent;
+  color: var(--ru-ink);
+  border-color: var(--ru-line);
+}
+
+.ru-btn-ghost:hover {
+  background: rgba(31, 111, 104, 0.08);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .ru-section {
+    padding: 80px 0;
+  }
+}

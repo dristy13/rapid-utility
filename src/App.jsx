@@ -1,0 +1,108 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import ServicesSection from "./components/ServicesSection";
+import AboutSection from "./components/AboutSection";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
+import CreateUserForm from "./components/Form/CreateUserForm";
+
+import DigyaanshForm from "./components/DigyaanshForm";
+
+import UserDashboard from "./components/User/UserDashboard";
+import ExcelUpload from "./components/ExcelUpload";
+import AdminSweeperData from "./components/AdminSweeperData";
+import UserList from "./components/UserList";
+import ChangePassword from "./components/ChangePassword";
+// ⭐ Experience Certificate Component
+import DeepakExperience from "./components/ExperienceCertificate";
+
+import AdminNightGuardData from "./components/AdminNightGuardData";
+import NightGuardExcelUpload from "./components/ExcelUploadNightGuard";
+import AdminSendNotification from "./components/AdminSendNotification";
+import AddDesignation from "./components/NewDesignation";
+import Manpower from "./pages/Manpower";
+import BSDM from "./pages/BSDM";
+import Construction from "./pages/Construction";
+import Security from "./pages/Security";
+import IT from "./pages/IT";
+import Housekeeping from "./pages/Housekeeping";
+import Warehouse from "./pages/Warehouse";
+import Hospitality from "./pages/Hospitality";
+import PlantWork from "./pages/PlantWork";
+import Gallery from "./components/gallery";
+import WhatsAppButton from "./components/WhatsAppButton";
+import EmailButton from "./components/EmailButton";
+function Home() {
+  return (
+    <>
+      <Navbar />
+      <HeroSection />
+      <ServicesSection />
+      <AboutSection />
+      <Gallery />
+      <ContactSection />
+      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/userdashboard" element={<UserDashboard />} />
+
+        {/* Forms */}
+
+        <Route path="/form/digyaansh-appointment" element={<DigyaanshForm />} />
+
+        <Route path="/users" element={<UserList />} />
+
+        <Route path="/admin/sweeper-data" element={<AdminSweeperData />} />
+
+        <Route path="/upload-excel" element={<ExcelUpload />} />
+        <Route
+          path="/admin/nightguard-data"
+          element={<AdminNightGuardData />}
+        />
+        <Route path="/upload-nightguard" element={<NightGuardExcelUpload />} />
+        <Route
+          path="/admin/send-notification"
+          element={<AdminSendNotification />}
+        />
+
+        <Route path="/add-designation" element={<AddDesignation />} />
+
+        {/* ⭐ NEW ROUTE FIX ⭐ */}
+        <Route
+          path="/form/digyaansh-experience"
+          element={<DeepakExperience />}
+        />
+        <Route path="/form/create-user" element={<CreateUserForm />} />
+
+        <Route path="/change-password" element={<ChangePassword />} />
+        <Route path="/service/housekeeping" element={<Housekeeping />} />
+        <Route path="/service/it" element={<IT />} />
+        <Route path="/service/security" element={<Security />} />
+        <Route path="/service/construction" element={<Construction />} />
+        <Route path="/service/bsdm" element={<BSDM />} />
+        <Route path="/service/manpower" element={<Manpower />} />
+        <Route path="/service/warehouse" element={<Warehouse />} />
+        <Route path="/service/hospitality" element={<Hospitality />} />
+        <Route path="/service/plant-work" element={<PlantWork />} />
+      </Routes>
+      <EmailButton />
+      <WhatsAppButton />
+    </BrowserRouter>
+  );
+}
+
+export default App;
